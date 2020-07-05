@@ -1,13 +1,9 @@
-
-
-
 const axiosStandings = axios.create({
 
     baseURL: 'https:ergast.com/api/f1'
 })
 
 //Standings
-
 
 document.getElementById('form1').onsubmit = e => {
 
@@ -19,8 +15,18 @@ document.getElementById('form1').onsubmit = e => {
     axiosStandings
         .get(`/${season}/drivers/${driver}/driverStandings.json`)
         .then(response => {
-        // console.log(response.data.MRData.StandingsTable.StandingsLists.DriverStandings[0])
-          console.log(response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].position)
+
+            console.log(response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].position)
+
+            const position = response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].position
+
+            const points = response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].points
+
+            const wins = response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].wins
+
+            let results = `El piloto ${driver} en la temporada ${season} ha quedado en el mundial en la posición ${position} con ${points} puntos y ha ganado ${wins} carreras`
+
+            document.getElementById("result").innerHTML = results
         })
 
 }
