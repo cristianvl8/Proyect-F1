@@ -4,7 +4,11 @@ const Pilot = require('../models/pilot.model')
 const Circuit = require('../models/circuit.model')
 const Constructor = require('../models/constructor.model')
 
-// mongoose.connect(`mongodb://localhost/${dbName}`)
+const dbtitle = 'F1-Proyect'
+mongoose.connect(`mongodb://localhost/${dbtitle}`, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+})
 
 
 const pilots = [
@@ -297,7 +301,7 @@ const circuits = [
         country: "Monaco"
 
     }, {
-        photo: "mohttps://upload.wikimedia.org/wikipedia/commons/f/f8/Monza_track_map.svgnza",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Monza_track_map.svg",
         url: "http://en.wikipedia.org/wiki/Autodromo_Nazionale_Monza",
         circuitName: "Autodromo Nazionale di Monza",
         lat: "45.6156",
@@ -401,9 +405,60 @@ const circuits = [
 ]
 
 
-const constructor = [
+const constructors = [
 
-
+    {
+        photo: "https://upload.wikimedia.org/wikipedia/commons/f/fb/2019_Chinese_Grand_Prix_Hamilton_%2847611075911%29.jpg",
+        url: "http://en.wikipedia.org/wiki/Alfa_Romeo_in_Formula_One",
+        name: "Alfa Romeo",
+        nationality: "Italian"
+    }, {
+        photo: "https://upload.wikimedia.org/wikipedia/commons/7/73/2020_Formula_One_tests_Barcelona%2C_Ferrari_SF1000%2C_Leclerc.jpg",
+        url: "http://en.wikipedia.org/wiki/Scuderia_Ferrari",
+        name: "Ferrari",
+        nationality: "Italian"
+    }, {
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d6/FIA_F1_Austria_2019_Nr._20_Magnussen_1.jpg",
+        url: "http://en.wikipedia.org/wiki/Haas_F1_Team",
+        name: "Haas F1 Team",
+        nationality: "American"
+    }, {
+        photo: "https://upload.wikimedia.org/wikipedia/commons/a/a3/FIA_F1_Austria_2019_Nr._55_Sainz_1.jpg",
+        url: "http://en.wikipedia.org/wiki/McLaren",
+        name: "McLaren",
+        nationality: "British"
+    }, {
+        photo: "https://upload.wikimedia.org/wikipedia/commons/f/fb/2019_Chinese_Grand_Prix_Hamilton_%2847611075911%29.jpg",
+        url: "http://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One",
+        name: "Mercedes",
+        nationality: "German"
+    }, {
+        photo: "https://upload.wikimedia.org/wikipedia/commons/5/55/2019_Formula_One_tests_Barcelona%2C_Stroll_%2847209286722%29.jpg",
+        url: "http://en.wikipedia.org/wiki/Racing_Point_F1_Team",
+        name: "Racing Point",
+        nationality: "British"
+    }, {
+        photo: "https://upload.wikimedia.org/wikipedia/commons/7/7d/FIA_F1_Austria_2019_Nr._33_Verstappen_2.jpg",
+        url: "http://en.wikipedia.org/wiki/Red_Bull_Racing",
+        name: "Red Bull",
+        nationality: "Austrian"
+    },
+    {
+        photo: "https://upload.wikimedia.org/wikipedia/commons/5/58/2019_Canadian_Grand_Prix_H%C3%BClkenberg_%2848089430413%29.jpg",
+        url: "http://en.wikipedia.org/wiki/Renault_in_Formula_One",
+        name: "Renault",
+        nationality: "French"
+    }, {
+        photo: "https://upload.wikimedia.org/wikipedia/commons/f/f2/F%C3%B3rmula_1_%E2%80%93_Grande_Pr%C3%AAmio_do_Brasil_de_F1_2019_%2849080061636%29.jpg",
+        url: "http://en.wikipedia.org/wiki/Scuderia_Toro_Rosso",
+        name: "Toro Rosso",
+        nationality: "Italian"
+    }, {
+        photo: "https://upload.wikimedia.org/wikipedia/commons/0/03/FIA_F1_Austria_2019_Nr._63_Russell_1.jpg",
+        url: "http://en.wikipedia.org/wiki/Williams_Grand_Prix_Engineering",
+        name: "Williams",
+        nationality: "British"
+    }
 
 
 
@@ -421,9 +476,17 @@ Pilot
     .catch(err => console.log('There was an error creating the pilots', err))
 
 Circuit
-    .create(pilots)
+    .create(circuits)
     .then(alltheCircuits => {
         console.log(`Created ${alltheCircuits.length} circuit`)
-        mongoose.connection.close();
+
     })
     .catch(err => console.log('There was an error creating the circuits', err))
+
+Constructor
+    .create(constructors)
+    .then(alltheConstructors => {
+        console.log(`Created ${alltheConstructors.length} constructors`)
+        mongoose.connection.close();
+    })
+    .catch(err => console.log('There was an error creating the constructors', err))
