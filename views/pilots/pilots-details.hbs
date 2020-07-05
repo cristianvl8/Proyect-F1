@@ -1,26 +1,45 @@
-
-<h2>{{givenName}} {{familyName}}</h2>
-<p>Date of Birth:{{dateOfBirth}}</p>
-<p>Nationality: {{nationality}}</p>
-<p>Car code: {{code}}</p>
-<a href="{{url}}">Check more info here:</a>
-<img src="{{photo}}" alt="foto del piloto">
-
-
-
-<form id="form1">
-
-    <input id="input1" type="text">
-
-    <input  id="input2" type="text">
-
-    <button>Enviar</button>
-
-</form>
-
-<ul id="result"></ul>
+<div class="container">
+    <div class="row">
+        <div class="col justify-content-center text-center align">
+            <h1>{{givenName}} {{familyName}}</h1>
+            <p>Date of Birth:{{dateOfBirth}}</p>
+            <p>Nationality: {{nationality}}</p>
+            <p>Car code: {{code}}</p>
+            <a href="{{url}}">Check more info here</a>
+        </div>
+        <div class="col">
+            <img src="{{photo}}" alt="foto del piloto">
+        </div>
 
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-<script src="/javascripts/main.js"></script>
+    </div>
+
+    <form id="form1">
+        {{!-- <select>
+        <option value="">current</option>
+        <option value="">2019</option>
+        <option value="">2018</option>
+        <option value="">2017</option>
+    </select> --}}
+
+        <input id="input1" type="text">
+
+        {{!-- <select>
+        <option value="">hamilton</option>
+        <option value="">alonso</option>
+        <option value=""></option>
+        <option value=""></option>
+    </select> --}}
+        <input id="input2" type="text">
+
+        <button>Enviar</button>
+
+    </form>
+
+    <ul id="result"></ul>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="/javascripts/main.js"></script>

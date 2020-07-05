@@ -1,9 +1,14 @@
+<div class="container">
+    <div class="row">
+
+        {{#each allCircuits}}
+        <div class="col-6 div-margin">
+            <h1>{{circuitName}}</h1> <br>
+            <img src="{{photo}}" alt="foto del circuito"> <br>
+            <a href="/circuits/{{_id}}">Click here to see more details</a> 
+        </div>
+        {{/each}}
 
 
-{{#each allCircuits}}
-
-<h2>{{circuitName}}</h2>
-<img src="{{photo}}" alt="foto del circuito">
-<a href="/circuits/{{_id}}">Click here to see more details</a>
-
-{{/each}}
+    </div>
+</div>

@@ -1,12 +1,31 @@
 img {
 
-  width: 50%;
-  height: 50%;
+  
+  height: 300px;
+  object-fit: cover;
 }
 
+.div-margin {
+  margin-bottom: 30px;
+}
+
+.bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  
+}
+// .index {
+//   background-image: url("/images/Ferrari-F1-racing-car-retro-driver_1920x1200\ \(1\).jpg");
+//   background-size: initial;
+// }
 
 body {
+  font-family: 'Racing Sans One', cursive;
   font-weight: 200;
+  
 }
 
 h1, h2, h3 {

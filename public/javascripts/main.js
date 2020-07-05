@@ -19,8 +19,8 @@ document.getElementById('form1').onsubmit = e => {
     axiosStandings
         .get(`/${season}/drivers/${driver}/driverStandings.json`)
         .then(response => {
-        console.log(response.data.MRData.StandingsTable.StandingsLists.DriverStandings[0])
-
+        // console.log(response.data.MRData.StandingsTable.StandingsLists.DriverStandings[0])
+          console.log(response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].position)
         })
 
 }
