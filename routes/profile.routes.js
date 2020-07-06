@@ -2,9 +2,7 @@ const express = require("express")
 const router = express.Router()
 const passport = require("passport")
 const User = require("../models/user.model")
-const {
-    findByIdAndUpdate
-} = require("../models/user.model")
+
 
 
 // Logged in checker middleware
@@ -27,7 +25,7 @@ router.get('/', checkAuthenticated, (req, res) => {
 })
 
 
-router.post('/:id', checkAuthenticated, (req, res) => {
+router.get('/:id', checkAuthenticated, (req, res) => {
 
     User
         // .findByIdAndUpdate({ user: req.user }, { $push: { favpilot: [req.params.id] } })
