@@ -1,4 +1,4 @@
-const axiosStandings = axios.create({
+const axiosApp = axios.create({
 
     baseURL: 'https:ergast.com/api/f1'
 })
@@ -12,7 +12,7 @@ document.getElementById('form1').onsubmit = e => {
     const season = document.getElementById('input1').value
     const driver = document.getElementById('input2').value
 
-    axiosStandings
+    axiosApp
         .get(`/${season}/drivers/${driver}/driverStandings.json`)
         .then(response => {
 
@@ -24,7 +24,7 @@ document.getElementById('form1').onsubmit = e => {
 
             const wins = response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].wins
 
-            let results = `El piloto ${driver} en la temporada ${season} ha quedado en el mundial en la posición ${position} con ${points} puntos y ha ganado ${wins} carreras`
+            let results = `El piloto ${driver} en la temporada ${season} quedó en el mundial en la posición ${position} con ${points} puntos y ganó ${wins} carreras`
 
             document.getElementById("result").innerHTML = results
         })

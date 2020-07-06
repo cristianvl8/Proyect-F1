@@ -5,42 +5,54 @@
             <p>Date of Birth:{{dateOfBirth}}</p>
             <p>Nationality: {{nationality}}</p>
             <p>Car code: {{code}}</p>
-            <a href="{{url}}">Check more info here</a>
+            <a href="{{url}}">Check more info here</a> <br>
+            <a href="/profile/{{id}}">add to favorites</a>
         </div>
         <div class="col">
+
             <img src="{{photo}}" alt="foto del piloto">
         </div>
 
-
-
-    </div>
-
-    <form id="form1">
-        {{!-- <select>
+        <div class="col">
+            <h2>Standings Checker</h2>
+            <form id="form1">
+                {{!-- <select>
         <option value="">current</option>
         <option value="">2019</option>
         <option value="">2018</option>
         <option value="">2017</option>
         
-    </select> --}}
+      </select> --}}
+                <label>Introduce the year</label>
+                <input id="input1" type="text">
 
-        <input id="input1" type="text">
-
-        {{!-- <select>
+                {{!-- <select>
         <option value="">hamilton</option>
         <option value="">alonso</option>
         <option value=""></option>
         <option value=""></option>
-    </select> --}}
-        <input id="input2" type="text">
+      </select> --}}
+                <label>Introduce the pilot</label>
+                <input id="input2" type="text">
 
-        <button>Enviar</button>
+                <button>Enviar</button>
 
-    </form>
+            </form> <br>
 
-    <h2 id="result"></h2>
+            <h2 id="result"></h2>
+
+        </div>
 
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <script src="/javascripts/main.js"></script>
+
+    </div>
+</div>
+
+
+
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="/javascripts/pilot.js"></script>

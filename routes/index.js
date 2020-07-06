@@ -6,6 +6,6 @@ module.exports = app => {
   app.use('/pilots', require('./pilots.routes'))
   app.use('/circuits', require('./circuits.routes'))
   app.use('/constructors', require('./constructors.routes'))
-  app.use('/profile', require('./user.routes.js'))
-    
+  app.use('/profile', require('./profile.routes.js'))
+  app.use('/season', require('./season.routes.js'))
 }
