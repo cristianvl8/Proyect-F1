@@ -32,17 +32,28 @@ router.get('/:id', checkAuthenticated, (req, res) => {
 
         .findOne(req.user)
 
-        .then(user => console.log(user))
+        .then(user => { 
+            
+            let arr = user.favpilot
 
+            arr.push(req.params.id)
 
+            console.log(arr)
+            console.log(user._id)
+            
+        
+            User.
+                findByIdAndUpdate({ user: user._id }, { favpilot: arr.push(req.params.id) })
+                .then()
+                 .catch()
+                 
+
+})
 
 })
 
 
 
-
-// res.render('profile/profile', {
-// user: req.user }))
 
 
 
