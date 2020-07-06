@@ -27,28 +27,35 @@ router.get('/', checkAuthenticated, (req, res) => {
 
 router.get('/:id', checkAuthenticated, (req, res) => {
 
+    const updatedUser = {}
+
+    updatedUser.favpilot = req.params.id
+
     User
-        // .findByIdAndUpdate({ user: req.user }, { $push: { favpilot: [req.params.id] } })
+
 
         .findOne(req.user)
 
-        .then(user => { 
-            
-            let arr = user.favpilot
 
-            arr.push(req.params.id)
+        .then(user => {
+            console.log(user)
+            // let arr = user.favpilot
 
-            console.log(arr)
-            console.log(user._id)
-            
-        
+            // arr.push(req.params.id)
+
+
+
+
             User.
-                findByIdAndUpdate({ user: user._id }, { favpilot: arr.push(req.params.id) })
+            
+            findByIdAndUpdate(user._id, updatedUser, {
+                    new: true
+                })
                 .then()
-                 .catch()
-                 
+                .catch()
 
-})
+
+        })
 
 })
 
