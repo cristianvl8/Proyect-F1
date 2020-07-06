@@ -1,34 +1,48 @@
-<h1>Race Schedule</h1> <br>
-
-<h2>Check the rounds and don't ever miss a race this season!</h2>
-
-
-<form id="form-season">
-    {{!-- <select>
-        <option value="">current</option>
-        <option value="">2019</option>
-        <option value="">2018</option>
-        <option value="">2017</option>
+<div class="container">
+ <div class="row">
+     <div class="col">
+        <h1>Race Schedule</h1> <br>
         
-    </select> --}}
-    <label for="">Introduce a round</label>
-    <input id="input-round" type="text">
+        <h3>Check the rounds and don't ever miss a race this season!</h3> <br>
+        
+        
+        <form id="form-season">
+            {{!-- <select>
+                <option value="">current</option>
+                <option value="">2019</option>
+                <option value="">2018</option>
+                <option value="">2017</option>
+                
+            </select> --}}
+            <label for="">Introduce a round</label>
+            <input id="input-round" type="text">
+        
+            {{!-- <select>
+                <option value="">hamilton</option>
+                <option value="">alonso</option>
+                <option value=""></option>
+                <option value=""></option>
+            </select> --}}
+            {{!-- <input id="input2" type="text">--}}
+        
+            <button>Enviar</button>
+        
+        </form> <br>
+        
+        <ul>
+        
+            <li id="result-season"></li> <br>
+            <li id="result-date"></li>
+        
+        </ul>
+     </div>
+    <div class="col">
 
-    {{!-- <select>
-        <option value="">hamilton</option>
-        <option value="">alonso</option>
-        <option value=""></option>
-        <option value=""></option>
-    </select> --}}
-    {{!-- <input id="input2" type="text">--}}
+        <img src="images/image.jpg" alt="foto f1 calendario">
+    </div>
 
-     <button>Enviar</button> 
- 
-</form> <br>
-
-<h2 id="result-season"></h2> <br>
-<h2 id="result-date"></h2>
-
+</div>
+</div>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
