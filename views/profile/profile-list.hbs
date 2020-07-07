@@ -1,0 +1,48 @@
+<h1>Bienvenido de nuevo {{username}}</h1> <br>
+
+<div class="container">
+    <div class="row">
+
+        {{#each favpilot}}
+        <div class="col-4">
+            <h2>{{givenName}} {{familyName}}</h2>
+            <p>Pilot Number {{permanentNumber}}</p>
+            <img src="{{photo}}" alt="foto del piloto">
+            <a href="/profile?id={{id}}"></a>
+        </div>
+        {{/each}}
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {{#each favcircuit}}
+
+        <div class="col-6">
+
+            <h2>{{circuitName}}</h2>
+            <img src="{{photo}}" alt="">
+
+
+        </div>
+
+        {{/each}}
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+
+        {{#each favconstructor}}
+        <div class="col-6">
+            <h2>{{name}}</h2>
+            <img src="{{photo}}" alt="foto del piloto">
+        </div>
+        {{/each}}
+
+
+    </div>
+</div>

@@ -3,6 +3,9 @@ const router = express.Router()
 const passport = require("passport")
 const User = require("../models/user.model")
 const Pilot = require("../models/pilot.model")
+const {
+    findByIdAndDelete
+} = require("../models/user.model")
 
 
 
@@ -40,7 +43,7 @@ router.get('/favpilot/:id', checkAuthenticated, (req, res) => {
 // Add to favourite circuits pushing id to the array
 
 router.get('/favcircuit/:id', checkAuthenticated, (req, res) => {
-    
+
     User
         .findOne(req.user)
         .then(user => {
@@ -87,7 +90,7 @@ router.get('/favconstructor/:id', checkAuthenticated, (req, res) => {
 
 })
 
-// Check logged in session 
+// Profile favourite list 
 
 router.get('/', checkAuthenticated, (req, res) => {
 
@@ -102,8 +105,8 @@ router.get('/', checkAuthenticated, (req, res) => {
                 .populate("favconstructor")
                 .then(user => {
                     console.log(user)
-                    res.render('profile/profile',user)
-                
+                    res.render('profile/profile-list', user)
+
                 })
 
         })
@@ -111,9 +114,13 @@ router.get('/', checkAuthenticated, (req, res) => {
 })
 
 
+// Profile delete favourite
 
+router.get('/', checkAuthenticated, (req, res) => {
 
-
+    findByIdAndDelete(req.query.id)
+        .populate("favpilot")
+})
 
 
 module.exports = router
