@@ -104,7 +104,7 @@ router.get('/', checkAuthenticated, (req, res) => {
                 .populate("favcircuit")
                 .populate("favconstructor")
                 .then(user => {
-                    console.log(user)
+
                     res.render('profile/profile-list', user)
 
                 })
@@ -114,12 +114,85 @@ router.get('/', checkAuthenticated, (req, res) => {
 })
 
 
-// Profile delete favourite
+// Profile delete favourite pilot
 
-router.get('/', checkAuthenticated, (req, res) => {
+router.get('/deletepilot/:id', checkAuthenticated, (req, res) => {
 
-    findByIdAndDelete(req.query.id)
-        .populate("favpilot")
+
+    User
+        .findOne(req.user)
+        .then(user => {
+
+
+            User
+                .findByIdAndUpdate(user._id, {
+                    $pull: {
+                        favpilot: req.params.id
+                    }
+                }, {
+                    new: true
+                })
+                .then(() => res.redirect('/profile'))
+
+                .catch(err => console.log(err))
+
+        })
+
+
+})
+
+// Profile delete favourite circuit
+
+router.get('/deletecircuit/:id', checkAuthenticated, (req, res) => {
+
+
+    User
+        .findOne(req.user)
+        .then(user => {
+
+
+            User
+                .findByIdAndUpdate(user._id, {
+                    $pull: {
+                        favcircuit: req.params.id
+                    }
+                }, {
+                    new: true
+                })
+                .then(() => res.redirect('/profile'))
+
+                .catch(err => console.log(err))
+
+        })
+
+
+})
+
+// Profile delete favourite circuit
+
+router.get('/deleteconstructor/:id', checkAuthenticated, (req, res) => {
+
+
+    User
+        .findOne(req.user)
+        .then(user => {
+
+
+            User
+                .findByIdAndUpdate(user._id, {
+                    $pull: {
+                        favconstructor: req.params.id
+                    }
+                }, {
+                    new: true
+                })
+                .then(() => res.redirect('/profile'))
+
+                .catch(err => console.log(err))
+
+        })
+
+
 })
 
 
