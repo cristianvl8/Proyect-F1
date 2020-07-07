@@ -103,44 +103,13 @@ router.get('/', checkAuthenticated, (req, res) => {
                 .then(user => {
                     console.log(user)
                     res.render('profile/profile',user)
-                    
-
                 
-
-                    
-
                 })
 
         })
 
-
-
-
-   
-
 })
 
-
-// router.get('/favpilots', checkAuthenticated, (req, res) => {
-
-//     User
-
-//         .findOne(req.user)
-//         .then(user => {
-
-//    User
-//         .findById(user._id)
-//     .populate('favpilot')
-// Pilot.find()
-//     .then
-//          res.render('profile/favourite-pilots', user._id)
-// asd
-
-//         })
-
-
-
-// })
 
 
 
