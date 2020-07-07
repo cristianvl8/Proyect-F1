@@ -7,25 +7,30 @@ h1 {
 
 .index {
   background: url("/images/Ferrari-F1-racing-car-retro-driver_1920x1200 (1).jpg") no-repeat;
+  width: 1900px;
   height: 1200px;
   background-size: cover; }
 
 .teams {
-  background: url("/images/F1-2020-All-Team-Desktop-Wallpaper.jpg") no-repeat;
+  background: url("/images/F1-2020-All-Team.jpg") no-repeat center center;
   height: 1200px;
-  filter: alpha(opacity=60);
-  opacity: 0.5;
-  background-size: cover; }
+  background-size: cover;
+  padding-top: 50px; }
 
 .circuits {
-  background: url("/images/eaurouge.jpg") no-repeat;
+  background: url("/images/eaurougeopa.jpg") no-repeat center center;
   height: 1200px;
-  opacity: 0.5;
-  background-size: cover; }
+  background-size: cover;
+  padding-top: 50px; }
 
 .pilots {
+  background: url("/images/pilots2020opa.jpg") no-repeat center center;
   height: 1200px;
-  background-size: cover; }
+  background-size: cover;
+  padding-top: 50px; }
+
+.space {
+  margin-bottom: 20px; }
 
 img {
   height: 300px;

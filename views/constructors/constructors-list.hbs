@@ -1,24 +1,68 @@
-<div class="teams backopacity">
+<div class="teams">
 
     <div class="container">
-
-        <div class="row">
-
+        <div class="row justify-content-around">
 
 
             {{#each allConstructors}}
 
-            <div class="col-6 div-margin">
+            <div class="col-6 space">
 
-                <h2>{{name}}</h2>
-                <img src="{{photo}}" alt="imagen del constructor">
-                <a href="/constructors/{{_id}}">Click here to see more details</a>
+                <div class="card card-cascade wider reverse">
 
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="{{photo}}" alt="imagen del constructor">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+
+                        <!-- Title -->
+                        <h2 class="card-title"><strong>{{name}}</strong></h2>
+                        <!-- Subtitle -->
+
+                        <!-- Text -->
+                        <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+                            doloremque
+                            laudantium, totam rem aperiam. </p>
+
+                        <!-- Linkedin -->
+                        <a href="/constructors/{{_id}}">Click here to see more details</a>
+
+                    </div>
+
+                </div>
             </div>
+
             {{/each}}
 
-
         </div>
+
     </div>
 
 </div>
+
+{{!-- <div class="container">
+
+    <div class="row">
+
+
+
+        {{#each allConstructors}}
+
+        <div class="col-6 div-margin">
+
+            <h2>{{name}}</h2>
+            <img src="{{photo}}" alt="imagen del constructor">
+            <a href="/constructors/{{_id}}">Click here to see more details</a>
+
+        </div>
+        {{/each}}
+
+
+    </div>
+</div> --}}
