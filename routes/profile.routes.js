@@ -2,19 +2,12 @@ const express = require("express")
 const router = express.Router()
 const passport = require("passport")
 const User = require("../models/user.model")
-const {
-    findByIdAndUpdate
-} = require("../models/user.model")
+const Pilot = require("../models/pilot.model")
+
 
 
 // Logged in checker middleware
 const checkAuthenticated = (req, res, next) => req.isAuthenticated() ? next() : res.redirect('/login')
-
-// Endpoints
-// router.get('/', (req, res) => {
-//     console.log('¿Está el usuario logeado?', req.isAuthenticated())
-//     res.render('index')
-// })
 
 
 // Check logged in session 
@@ -23,28 +16,54 @@ router.get('/', checkAuthenticated, (req, res) => {
 
     res.render('profile/profile')
 
-
 })
 
-
-router.post('/:id', checkAuthenticated, (req, res) => {
-
-    User
-        // .findByIdAndUpdate({ user: req.user }, { $push: { favpilot: [req.params.id] } })
-
-        .findOne(req.user)
-
-        .then(user => console.log(user))
+router.get('/:id', checkAuthenticated, (req, res) => {
 
 
+        User
+            .findOne(req.user)
+            .then(user => {
 
-})
+
+                User
+                    .findByIdAndUpdate(user._id, {
+                        $push: {
+                            favpilot: req.params.id
+                        }
+                    }, {
+                        new: true
+                    })
+                    .then(() => res.redirect('/pilots'))
+
+                    .catch(err => console.log(err))
+
+            })
+
+    })
+
+    // router.get('/favpilots', checkAuthenticated, (req, res) => {
+
+    //     User
+
+    //         .findOne(req.user)
+    //         .then(user => {
+
+    //    User
+    //         .findById(user._id)
+//     .populate('favpilot')
+// Pilot.find()
+//     .then
+//          res.render('profile/favourite-pilots', user._id)
+
+
+//         })
 
 
 
+// })
 
-// res.render('profile/profile', {
-// user: req.user }))
+
 
 
 
