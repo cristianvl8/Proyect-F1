@@ -55,7 +55,7 @@ router.get('/:id', checkAuthenticated, (req, res) => {
 // Pilot.find()
 //     .then
 //          res.render('profile/favourite-pilots', user._id)
-
+// asd
 
 //         })
 
