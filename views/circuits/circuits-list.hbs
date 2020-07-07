@@ -1,14 +1,17 @@
-<div class="container">
-    <div class="row">
+<div class="circuits backopacity">
 
-        {{#each allCircuits}}
-        <div class="col-6 div-margin">
-            <h1>{{circuitName}}</h1> <br>
-            <img src="{{photo}}" alt="foto del circuito"> <br>
-            <a href="/circuits/{{_id}}">Click here to see more details</a> 
+    <div class="container">
+        <div class="row justify-content-between">
+
+            {{#each allCircuits}}
+            <div class="col-6">
+                <h1>{{circuitName}}</h1> <br>
+                <img src="{{photo}}" alt="foto del circuito"> <br>
+                <a href="/circuits/{{_id}}">Click here to see more details</a>
+            </div>
+            {{/each}}
+
+
         </div>
-        {{/each}}
-
-
     </div>
 </div>

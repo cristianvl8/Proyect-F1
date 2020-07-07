@@ -1,20 +1,22 @@
-<div class="container">
+<div class="pilots">
+    <img src="/images/pilots2020.jpg" class="backopacity" alt="">
+    <div class="container">
+        <div class="row justify-content-around">
 
-<div class="row">
 
 
+            {{#each allPilots}}
 
-    {{#each allPilots}}
+            <div class="col-4 div-margin">
 
-    <div class="col-4 div-margin" >
+                <h2>{{givenName}} {{familyName}}</h2> <br>
+                <img src="{{photo}}" alt="foto del piloto"> <br>
+                <a href="/pilots/{{_id}}">More details</a>
 
-        <h2>{{givenName}} {{familyName}}</h2> <br>
-        <img src="{{photo}}" alt="foto del piloto"> <br>
-        <a href="/pilots/{{_id}}">More details</a> 
+            </div>
+
+            {{/each}}
+
+        </div>
     </div>
-
-    {{/each}}
-
-
-</div>
 </div>

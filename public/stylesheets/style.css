@@ -1,3 +1,32 @@
+body {
+  font-family: 'Racing Sans One', cursive;
+  font-weight: 200; }
+
+h1 {
+  color: red; }
+
+.index {
+  background: url("/images/Ferrari-F1-racing-car-retro-driver_1920x1200 (1).jpg") no-repeat;
+  height: 1200px;
+  background-size: cover; }
+
+.teams {
+  background: url("/images/F1-2020-All-Team-Desktop-Wallpaper.jpg") no-repeat;
+  height: 1200px;
+  filter: alpha(opacity=60);
+  opacity: 0.5;
+  background-size: cover; }
+
+.circuits {
+  background: url("/images/eaurouge.jpg") no-repeat;
+  height: 1200px;
+  opacity: 0.5;
+  background-size: cover; }
+
+.pilots {
+  height: 1200px;
+  background-size: cover; }
+
 img {
   height: 300px;
   object-fit: cover; }
@@ -5,22 +34,8 @@ img {
 .div-margin {
   margin-bottom: 30px; }
 
-.bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%; }
-
-body {
-  font-family: 'Racing Sans One', cursive;
-  font-weight: 200; }
-
 h1, h2, h3 {
   font-weight: 200; }
-
-.navbar {
-  margin-bottom: 70px; }
 
 #errorMsg {
   background-color: red;
