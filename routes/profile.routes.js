@@ -91,13 +91,32 @@ router.get('/favconstructor/:id', checkAuthenticated, (req, res) => {
 
 router.get('/', checkAuthenticated, (req, res) => {
 
+    User
+        .findOne(req.user)
+        .then(Objuser => {
+            User
+
+                .findById(Objuser._id)
+                .populate("favpilot")
+                .populate("favcircuit")
+                .populate("favconstructor")
+                .then(user => {
+                    console.log(user)
+                    res.render('profile/profile',user)
+                    
+
+                
+
+                    
+
+                })
+
+        })
 
 
 
 
-
-
-    res.render('profile/profile')
+   
 
 })
 
