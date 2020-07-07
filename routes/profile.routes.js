@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router()
 const passport = require("passport")
 const User = require("../models/user.model")
+const Pilot = require("../models/pilot.model")
 
 
 
@@ -19,27 +20,48 @@ router.get('/', checkAuthenticated, (req, res) => {
 
 router.get('/:id', checkAuthenticated, (req, res) => {
 
-    const updatedUser = {}
 
-    updatedUser.favpilot = req.params.id
+        User
+            .findOne(req.user)
+            .then(user => {
 
-    User
-        .findOne(req.user)
-        .then(user => {
-           
- 
-            User
-                .findByIdAndUpdate(user._id, { $push: {favpilot: req.params.id} }, {
-                     new: true})
-                .then(() => console.log())
-                .catch(err => console.log(err))
 
-            
+                User
+                    .findByIdAndUpdate(user._id, {
+                        $push: {
+                            favpilot: req.params.id
+                        }
+                    }, {
+                        new: true
+                    })
+                    .then(() => res.redirect('/pilots'))
 
-        })
+                    .catch(err => console.log(err))
 
-})
+            })
 
+    })
+
+    // router.get('/favpilots', checkAuthenticated, (req, res) => {
+
+    //     User
+
+    //         .findOne(req.user)
+    //         .then(user => {
+
+    //    User
+    //         .findById(user._id)
+//     .populate('favpilot')
+// Pilot.find()
+//     .then
+//          res.render('profile/favourite-pilots', user._id)
+
+
+//         })
+
+
+
+// })
 
 
 
