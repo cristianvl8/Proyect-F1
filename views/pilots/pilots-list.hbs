@@ -1,20 +1,21 @@
-<div class="container">
+<div class="pilots">
+    
+    <div class="container">
+        <div class="row justify-content-around">
 
-<div class="row">
 
+            {{#each allPilots}}
 
+            <div class="col-4 div-margin">
 
-    {{#each allPilots}}
+                <h2>{{givenName}} {{familyName}}</h2> <br>
+                <img src="{{photo}}" alt="foto del piloto"> <br>
+                <a href="/pilots/{{_id}}">More details</a>
 
-    <div class="col-4 div-margin" >
+            </div>
 
-        <h2>{{givenName}} {{familyName}}</h2> <br>
-        <img src="{{photo}}" alt="foto del piloto"> <br>
-        <a href="/pilots/{{_id}}">More details</a> 
+            {{/each}}
+
+        </div>
     </div>
-
-    {{/each}}
-
-
-</div>
 </div>
