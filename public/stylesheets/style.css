@@ -5,6 +5,8 @@ body {
 h1 {
   color: red; }
 
+
+
 .index {
   background: url("/images/Ferrari-F1-racing-car-retro-driver_1920x1200 (1).jpg") no-repeat;
   width: 1900px;
@@ -49,5 +51,11 @@ h1, h2, h3 {
   text-align: center;
   padding: 10px 0;
   margin-top: 5px; }
+
+  .imgfav {
+    height: 50px;
+
+    object-fit: cover;
+  }
 
 /*# sourceMappingURL=style.css.map */
