@@ -25,6 +25,13 @@ h1 {
   background-size: cover;
   padding-top: 50px; }
 
+.teams {
+  background: url("/images/F1-2020-All-Team.jpg") no-repeat center center;
+  background-attachment: fixed;
+  height: 1200px;
+  background-size: cover;
+  padding-top: 50px; }
+
 .teams img {
   height: 300px;
   object-fit: cover; }
@@ -33,6 +40,13 @@ h1 {
   background: url("/images/eaurougeopa.jpg") no-repeat center center;
   background-attachment: fixed;
   height: 100%;
+  background-size: cover;
+  padding-top: 50px; }
+
+.circuitsdetails {
+  background: url("/images/eaurougeopa.jpg") no-repeat center center;
+  background-attachment: fixed;
+  height: 1200px;
   background-size: cover;
   padding-top: 50px; }
 
@@ -49,6 +63,13 @@ h1 {
   background-size: cover;
   padding-top: 50px; }
 
+.pilotsdetails {
+  background: url("/images/pilots2020opa.jpg") no-repeat center center;
+  background-attachment: fixed;
+  height: 1200px;
+  background-size: cover;
+  padding-top: 50px; }
+
 .pilots img {
   height: 350px;
   object-fit: cover; }
@@ -56,7 +77,7 @@ h1 {
 .login {
   background: url("/images/cockpit-view.jpg") no-repeat center center;
   background-attachment: fixed;
-  height: 100%;
+  height: 1200px;
   background-size: cover;
   padding-top: 50px; }
 
@@ -105,6 +126,9 @@ img {
 
 .opacicardseason {
   background-color: rgba(120, 171, 236, 0.7); }
+
+label {
+  font-size: 20px; }
 
 h1,
 h2,
