@@ -4,20 +4,24 @@
 
         <div class="row spacediv">
 
-            <div class="card">
-                <h2 class="card-header">{{name}}</h2>
-                <div class="card-body">
+            <div class="card opacicard text-center" >
+                <h1 class="card-header" text-center>{{name}}</h1>
+                <div class="card-body text-center">
 
                     <section class="teamdetail">
 
-                        <h2>Nationality: {{nationality}}</h2>
+                        <h3>Nacionalidad: "{{nationality}}"</h3>
                         <img src="{{photo}}" alt="foto del circuito">
 
              
                     </section>
-                        <a href="{{url}}">Check more info here:</a>
+                        
                         <br>
-                        <a href="/profile/favconstructor/{{id}}">Add constructor to favorites</a>
+                       
+                        <figure class="imgfav">
+                        
+                            <a href="/profile/favconstructor/{{id}}"><img src="/images/heartfav.png"></a>
+                        </figure>
                 </div>
 
             </div>

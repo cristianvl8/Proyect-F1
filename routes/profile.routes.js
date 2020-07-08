@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const passport = require("passport")
 const User = require("../models/user.model")
-const cloudUploader = require('../configs/cloudinary.config')
+const cloudUploader = require('../configs/cloudinary.config.js')
 
 
 

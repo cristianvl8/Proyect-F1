@@ -28,7 +28,7 @@ h1 {
   background: url("/images/F1-2020-All-Team.jpg") no-repeat center center; //fixed;
   background-attachment: fixed; 
   // overflow: scroll;
-  height: 1200px;
+  height: 100%;
   background-size: cover;
   padding-top: 50px;
 }
@@ -41,7 +41,7 @@ h1 {
 .circuits {
   background: url("/images/eaurougeopa.jpg") no-repeat center center; //fixed
   background-attachment: fixed; 
-  height: 1200px;
+  height: 100%;
   background-size: cover;
   padding-top: 50px;
 }
@@ -56,7 +56,7 @@ h1 {
 .pilots{
   background: url("/images/pilots2020opa.jpg") no-repeat center center; //fixed
   background-attachment: fixed; 
-  height: 1200px;
+  height: 100%;
   background-size: cover;
   padding-top: 50px;
 }
@@ -69,7 +69,7 @@ h1 {
 .login{
   background: url("/images/cockpit-view.jpg") no-repeat center center; //fixed
   background-attachment: fixed; 
-  height: 1200px;
+  height: 100%;
   background-size: cover;
   padding-top: 50px;
 }
@@ -106,11 +106,18 @@ img {
   object-fit: cover;
 }
 
+
 .teamdetail img{
   width: 900px;
   height: 500px;
   object-fit: cover;
 }
+.circuitdetail img{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
 
 .div-margin {
   margin-bottom: 30px;
