@@ -10,8 +10,7 @@ h1 {
   width: 100%;
   z-index: 9000;
   border-top: 2px solid red;
-  border-bottom: 2px solid red;
-  transition: all .5s; }
+  border-bottom: 2px solid red; }
 
 .index {
   background: url("/images/Ferrari-F1-racing-car-retro-driver_1920x1200 (1).jpg") no-repeat;
@@ -20,9 +19,10 @@ h1 {
   background-size: cover; }
 
 .teams {
-  position: fixed;
   background: url("/images/F1-2020-All-Team.jpg") no-repeat center center;
+  background-attachment: fixed;
   height: 1200px;
+  background-size: cover;
   padding-top: 50px; }
 
 .teams img {
@@ -73,15 +73,33 @@ h1 {
   background-size: cover;
   padding-top: 50px; }
 
+.spacediv {
+  padding-top: 100px; }
+
 .space {
-  margin-bottom: 20px; }
+  margin-bottom: 50px; }
 
 img {
   width: 200px;
   object-fit: cover; }
 
+.imgcard {
+  width: 600px;
+  object-fit: cover; }
+
+.teamdetail img {
+  width: 900px;
+  height: 500px;
+  object-fit: cover; }
+
 .div-margin {
   margin-bottom: 30px; }
+
+.opacicard {
+  background-color: rgba(245, 245, 245, 0.7); }
+
+.opacicardseason {
+  background-color: rgba(120, 171, 236, 0.7); }
 
 h1,
 h2,
@@ -96,8 +114,9 @@ h3 {
   padding: 10px 0;
   margin-top: 5px; }
 
-.imgfav {
+.imgfav img {
   height: 50px;
+  width: 50px;
   object-fit: cover; }
 
 /*# sourceMappingURL=style.css.map */
