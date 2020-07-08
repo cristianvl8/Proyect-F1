@@ -1,17 +1,45 @@
-<div class="container">
-    <div class="row">
-        <div class="col justify-content-center text-center align">
-            <h2>{{circuitName}}</h2>
-            <p>Locality: {{locality}}</p>
-            <p>Country: {{country}}</p>
-            <p>Location: {{lat}} , {{long}}</p>
-            <a href="{{url}}">Check more info here:</a> <br>
-            <a href="/profile/favcircuit/{{id}}">Add circuit to favorites</a>
+<div class="circuits spacediv">
 
+
+    <div class="container">
+        <div class="row">
+            <div class="card">
+
+                <h2 class="card-header">{{circuitName}}</h2>
+
+                <div class="card-body">
+
+
+                    <h4>Locality: {{locality}}</h4>
+                    <h4>Country: {{country}}</h4>
+                    <h4>Location: {{lat}} , {{long}}</h4>
+                    <h4 href="{{url}}">Check more info here:</h4> <br>
+                    <h4 href="/profile/favcircuit/{{id}}">Add circuit to favorites</h4>
+
+                </div>
+                <div class="col imgcard">
+                    <img src="{{photo}}" alt="foto del circuito">
+
+                </div>
+
+
+            </div>
         </div>
-        <div class="col">
-            <img src="{{photo}}" alt="foto del circuito">
-        </div>
+
     </div>
 
 </div>
+
+
+{{!-- <div class="col justify-content-center text-center align">
+                <h2>{{circuitName}}</h2>
+                <p>Locality: {{locality}}</p>
+                <p>Country: {{country}}</p>
+                <p>Location: {{lat}} , {{long}}</p>
+                <a href="{{url}}">Check more info here:</a> <br>
+                <a href="/profile/favcircuit/{{id}}">Add circuit to favorites</a>
+
+            </div>
+            <div class="col">
+                <img src="{{photo}}" alt="foto del circuito">
+            </div> --}}
