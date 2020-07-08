@@ -5,6 +5,14 @@ body {
 h1 {
   color: red; }
 
+.menu {
+  position: fixed;
+  width: 100%;
+  z-index: 9000;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  transition: all .5s; }
+
 .index {
   background: url("/images/Ferrari-F1-racing-car-retro-driver_1920x1200 (1).jpg") no-repeat;
   width: 1900px;
@@ -12,19 +20,55 @@ h1 {
   background-size: cover; }
 
 .teams {
+  position: fixed;
   background: url("/images/F1-2020-All-Team.jpg") no-repeat center center;
   height: 1200px;
-  background-size: cover;
   padding-top: 50px; }
+
+.teams img {
+  height: 300px;
+  object-fit: cover; }
 
 .circuits {
   background: url("/images/eaurougeopa.jpg") no-repeat center center;
+  background-attachment: fixed;
   height: 1200px;
   background-size: cover;
   padding-top: 50px; }
 
+.circuits img {
+  float: left;
+  width: 250px;
+  height: 250px;
+  object-fit: cover; }
+
 .pilots {
   background: url("/images/pilots2020opa.jpg") no-repeat center center;
+  background-attachment: fixed;
+  height: 1200px;
+  background-size: cover;
+  padding-top: 50px; }
+
+.pilots img {
+  height: 350px;
+  object-fit: cover; }
+
+.login {
+  background: url("/images/cockpit-view.jpg") no-repeat center center;
+  background-attachment: fixed;
+  height: 1200px;
+  background-size: cover;
+  padding-top: 50px; }
+
+.register {
+  background: url("/images/register.jpg") no-repeat center center;
+  background-attachment: fixed;
+  height: 1200px;
+  background-size: cover;
+  padding-top: 50px; }
+
+.season {
+  background: url("/images/topview.jpg") no-repeat center center;
   height: 1200px;
   background-size: cover;
   padding-top: 50px; }
@@ -33,7 +77,7 @@ h1 {
   margin-bottom: 20px; }
 
 img {
-  height: 300px;
+  width: 200px;
   object-fit: cover; }
 
 .div-margin {

@@ -8,7 +8,10 @@
 
             <div class="col-6 space">
 
-                <div class="card card-cascade wider reverse">
+                <div class="card">
+
+                    <h2 class="card-header">{{name}}</h2>
+
 
                     <!-- Card image -->
                     <div class="view view-cascade overlay">
@@ -19,20 +22,14 @@
                     </div>
 
                     <!-- Card content -->
-                    <div class="card-body card-body-cascade text-center">
+                    <div class="card-body">
 
-                        <!-- Title -->
-                        <h2 class="card-title"><strong>{{name}}</strong></h2>
-                        <!-- Subtitle -->
+                        <h4 class="card-text">País: {{nationality}}</h4>
 
-                        <!-- Text -->
-                        <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
-                            doloremque
-                            laudantium, totam rem aperiam. </p>
-
-                        <!-- Linkedin -->
-                        <a href="/constructors/{{_id}}">Click here to see more details</a>
-
+                        <div class="card-footer text-muted text-center mt-4">
+                            <a href="/constructors/{{_id}}">More details</a>
+                        </div>
+                        
                     </div>
 
                 </div>

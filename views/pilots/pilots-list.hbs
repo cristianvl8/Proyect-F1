@@ -1,16 +1,45 @@
 <div class="pilots">
-    
+
     <div class="container">
-        <div class="row justify-content-around">
+        <div class="row justify-content-between">
 
 
             {{#each allPilots}}
 
             <div class="col-4 div-margin">
 
-                <h2>{{givenName}} {{familyName}}</h2> <br>
-                <img src="{{photo}}" alt="foto del piloto"> <br>
-                <a href="/pilots/{{_id}}">More details</a>
+                <!-- Card Wider -->
+                <div class="card text-white bg-dark">
+
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="{{photo}}" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center pb-0">
+
+                        <!-- Title -->
+                        <h2 class="card-title"><strong>{{givenName}} {{familyName}}</strong></h2>
+                        <!-- Subtitle -->
+                        <h5 class="blue-text pb-2">Nationality:  {{nationality}}</h5>
+                        <h5 class="blue-text pb-2">Fecha nacimiento:  {{dateOfBirth}}</h5>
+
+
+                        <!-- Card footer -->
+                        <div class="card-footer text-muted text-center mt-4">
+                            <a href="/pilots/{{_id}}">More details</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Card Wider -->
+
+
 
             </div>
 
@@ -19,3 +48,9 @@
         </div>
     </div>
 </div>
+
+
+
+{{!-- <h2>{{givenName}} {{familyName}}</h2> <br>
+                <img src="{{photo}}" alt="foto del piloto"> <br>
+                <a href="/pilots/{{_id}}">More details</a> --}}
