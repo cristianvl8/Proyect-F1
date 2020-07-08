@@ -1,0 +1,52 @@
+
+
+<div class="container">
+    <h1>Bienvenido/a de nuevo {{username}}</h1> <br>
+    <div class="row">
+
+        {{#each favpilot}}
+        <div class="col-4">
+            <h2>{{givenName}} {{familyName}}</h2>
+            <p>Pilot Number {{permanentNumber}}</p>
+            <img src="{{photo}}" alt="foto del piloto"> <br>
+            <a href="/profile/deletepilot/{{id}}">Eliminar de favoritos</a>
+        </div>
+        {{/each}}
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {{#each favcircuit}}
+
+        <div class="col-6">
+
+            <h2>{{circuitName}}</h2>
+            <img src="{{photo}}" alt=""> <br>
+            <a href="/profile/deletecircuit/{{id}}">Eliminar de favoritos</a>
+            </div>
+
+
+        </div>
+
+        {{/each}}
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+
+        {{#each favconstructor}}
+        <div class="col-6">
+            <h2>{{name}}</h2>
+            <img src="{{photo}}" alt="foto del piloto"> <br>
+            <a href="/profile/deleteconstructor/{{id}}">Eliminar de favoritos</a>
+        </div>
+        {{/each}}
+
+
+    </div>
+</div>

@@ -1,10 +1,9 @@
-
 body {
   font-family: 'Racing Sans One', cursive;
   font-weight: 200;
 }
 
-h1{
+h1 {
   color: red;
 }
 
@@ -39,7 +38,7 @@ h1{
   object-fit: cover;
 }
 
-.circuits{
+.circuits {
   background: url("/images/eaurougeopa.jpg") no-repeat center center; //fixed
   background-attachment: fixed; 
   height: 1200px;
@@ -110,7 +109,7 @@ img {
 //   left: 0;
 //   min-width: 100%;
 //   min-height: 100%;
-  
+
 // }
 // .index {
 //   background-image: url("/images/Ferrari-F1-racing-car-retro-driver_1920x1200\ \(1\).jpg");
@@ -118,7 +117,9 @@ img {
 // }
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 200;
 }
 
@@ -133,4 +134,11 @@ h1, h2, h3 {
   text-align: center;
   padding: 10px 0;
   margin-top: 5px;
+}
+
+.imgfav {
+  height: 50px;
+
+  object-fit: cover;
+
 }

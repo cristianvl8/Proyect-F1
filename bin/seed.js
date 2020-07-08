@@ -4,11 +4,17 @@ const Pilot = require('../models/pilot.model')
 const Circuit = require('../models/circuit.model')
 const Constructor = require('../models/constructor.model')
 
-const dbtitle = 'F1-Proyect'
-mongoose.connect(`mongodb://localhost/${dbtitle}`, {
+// const dbtitle = 'F1-Proyect'
+// mongoose.connect(`mongodb://localhost/${dbtitle}`, {
+//     useUnifiedTopology: true,
+//     useNewUrlParser: true
+// })
+
+
+mongoose.connect("mongodb+srv://Cristian-Fran:cristianfran@cluster0.mwy0t.mongodb.net/F1-Proyect"), {
     useUnifiedTopology: true,
     useNewUrlParser: true
-})
+}
 
 
 const pilots = [
