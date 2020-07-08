@@ -1,10 +1,9 @@
-
 body {
   font-family: 'Racing Sans One', cursive;
   font-weight: 200;
 }
 
-h1{
+h1 {
   color: red;
 }
 
@@ -14,14 +13,14 @@ h1{
 // .imgwrapper {
 //   width: 80%;
 // }
-.index{
-  background: url("/images/Ferrari-F1-racing-car-retro-driver_1920x1200\ \(1\).jpg") no-repeat;  //center center fixed
+.index {
+  background: url("/images/Ferrari-F1-racing-car-retro-driver_1920x1200\ \(1\).jpg") no-repeat; //center center fixed
   width: 1900px;
   height: 1200px;
   background-size: cover;
 }
 
-.teams{
+.teams {
   background: url("/images/F1-2020-All-Team.jpg") no-repeat center center; //fixed;
   height: 1200px;
   background-size: cover;
@@ -30,27 +29,29 @@ h1{
   // overflow: scroll;
 }
 
-.circuits{
+.circuits {
   background: url("/images/eaurougeopa.jpg") no-repeat center center; //fixed
   height: 1200px;
   background-size: cover;
   padding-top: 50px;
 }
 
-.pilots{
+.pilots {
   background: url("/images/pilots2020opa.jpg") no-repeat center center; //fixed
   height: 1200px;
   background-size: cover;
   padding-top: 50px;
 }
-.space{
+
+.space {
   margin-bottom: 20px;
 }
+
 // .backopacity {
 //   opacity: 0.5;
 // }
 img {
- 
+
   height: 300px;
   object-fit: cover;
 }
@@ -65,7 +66,7 @@ img {
 //   left: 0;
 //   min-width: 100%;
 //   min-height: 100%;
-  
+
 // }
 // .index {
 //   background-image: url("/images/Ferrari-F1-racing-car-retro-driver_1920x1200\ \(1\).jpg");
@@ -73,7 +74,9 @@ img {
 // }
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 200;
 }
 
@@ -91,8 +94,8 @@ h1, h2, h3 {
 }
 
 .imgfav {
-  height: 300px;
-  width: 100px;
+  height: 50px;
+
   object-fit: cover;
 
 }
