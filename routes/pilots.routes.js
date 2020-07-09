@@ -65,11 +65,11 @@ router.get("/edit/:id", checkAuthenticated, (req, res) => {
 
     Pilot
         .findById(req.params.id)
-        .then(thePilot => 
+        .then(thePilot =>
 
             req.user.id == thePilot.ownerId ?
-                res.render('pilots/pilots-edit-form', thePilot) :
-                res.redirect("/login"))
+            res.render('pilots/pilots-edit-form', thePilot) :
+            res.redirect("/login"))
 
 })
 
@@ -83,7 +83,7 @@ router.post("/edit/:id", checkAuthenticated, (req, res) => {
         nationality,
         dateOfBirth,
         permanentNumber,
-        
+
 
     } = req.body
 
@@ -102,7 +102,7 @@ router.post("/edit/:id", checkAuthenticated, (req, res) => {
                 permanentNumber,
                 ownerId: req.user.id
             })
-            .then(() => res.redirect("/pilots")):
+            .then(() => res.redirect("/pilots")) :
             res.redirect("/login"))
 
 
