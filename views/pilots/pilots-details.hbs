@@ -1,125 +1,47 @@
-<div class="pilots">
-
-    <div class="container">
-        <div class="row spacediv">
 
 
-            <div class="card opacicard justify-content-center text-center align">
-
-                <h2 class="card-header">{{givenName}} {{familyName}}</h2>
-
-                <div class="card-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <p>Date of Birth:{{dateOfBirth}}</p>
-                                <p>Nationality: {{nationality}}</p>
-                                <p>Car code: {{code}}</p>
-                                <a href="{{url}}">Check more info here</a> <br>
-
-                                <figure class="imgfav">
-                                    <a href="/profile/favpilot/{{id}}">Add pilot to favorites</a>
-                                    <a href="/profile/favpilot/{{id}}"><img src="/images/heartfav.png"></a>
-                                </figure>
-                            </div>
-                            <div class="col-md-3">
-                                <picture class="pilotdetail">
-                                    <img src="{{photo}}" alt="foto del piloto">
-                                </picture>
-
-
-                            </div>
-
-
+<div class="pilotsdetails">
+<div class="container">
+    <div class="row spacediv">
+        <div class="card opacicard justify-content-center text-center align">
+            <h2 class="card-header">{{givenName}} {{familyName}}</h2>
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Fecha de nacimiento:  {{dateOfBirth}}</p>
+                            <p>Nationalidad:  {{nationality}}</p>
+                            <p>Código de coche: {{code}}</p>
+                            
+                            <figure class="imgfav">
+                                
+                                <a href="/profile/favpilot/{{id}}"><img src="/images/heartfav.png"></a>
+                            </figure>
+                        </div>
+                        <div class="col-md-6">
+                            <picture class="pilotscard">
+                                <img src="{{photo}}" alt="foto del piloto">
+                            </picture>
                         </div>
                     </div>
+                </div>
+                <div class="col">
+                    <h2 class="card-header">Comprueba el palmarés del piloto</h2>
+                    <form id="form1" class="form-margin">
 
+                        <label>Introduce el año</label>
+                        <input id="input1" type="text">
 
-                    <div class="col">
-                        <h2 class="card-header">Standings Checker</h2>
-                        <form id="form1">
-                            {{!-- <select>
-                                    <option value="">current</option>
-                                    <option value="">2019</option>
-                                    <option value="">2018</option>
-                                    <option value="">2017</option>
-                                    
-                                </select> --}}
-                            <label>Introduce the year</label>
-                            <input id="input1" type="text">
-
-                            {{!-- <select>
-                                    <option value="">hamilton</option>
-                                    <option value="">alonso</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select> --}}
-                            <label>Introduce the pilot</label>
-                            <input id="input2" type="text">
-
-                            <button>Enviar</button>
-
-                        </form> <br>
-
-                        <h2 id="result"></h2>
-                    </div>
+                        <label>Introduce the piloto</label>
+                        <input id="input2" type="text">
+                        <button class="btn btn-light">Enviar</button>
+                    </form> <br>
+                    <h3 id="result"></h3>
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>
-
-
-
-
+</div>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
 <script src="/javascripts/pilot.js"></script>
-
-
-
-{{!-- <h1>{{givenName}} {{familyName}}</h1>
-                    <p>Date of Birth:{{dateOfBirth}}</p>
-                    <p>Nationality: {{nationality}}</p>
-                    <p>Car code: {{code}}</p>
-                    <a href="{{url}}">Check more info here</a> <br>
-                    <a href="/profile/favpilot/{{id}}">Add pilot to favorites</a>
-                    <a href="/profile/favpilot/{{id}}"><img src="/images/heartfav.png" class="imgfav"></a>
-
-
-                <div class="col">
-
-                    <img src="{{photo}}" alt="foto del piloto">
-                </div>
-
-
-
-                <div class="col">
-                    <h2>Standings Checker</h2>
-                    <form id="form1">
-                        {{!-- <select>
-                                    <option value="">current</option>
-                                    <option value="">2019</option>
-                                    <option value="">2018</option>
-                                    <option value="">2017</option>
-                                    
-                                </select> --}}
-<label>Introduce the year</label>
-<input id="input1" type="text">
-
-{{!-- <select>
-                                    <option value="">hamilton</option>
-                                    <option value="">alonso</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select> --}}
-<label>Introduce the pilot</label>
-<input id="input2" type="text">
-
-<button>Enviar</button>
-
-</form> <br>
-
-<h2 id="result"></h2> --}}

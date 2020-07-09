@@ -8,7 +8,8 @@ document.getElementById('form-season').onsubmit = e => {
 
     e.preventDefault()
 
-    const round = document.getElementById('input-round').value
+    const round = document.querySelector('#input-round').value
+    console.log(round)
 
     axiosApp
 

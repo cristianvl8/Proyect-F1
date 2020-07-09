@@ -1,52 +1,109 @@
+<div class="profile spacediv">
+    <div class="container">
+        <div class="card opacicard">
+            <h1 class="card-header">Bienvenido/a de nuevo {{username}}</h2>
+                <h2 class="card-header text-center">Pilotos Favoritos de {{username}}</h2>
 
+                <div class="row">
+                    {{#each favpilot}}
+                    <div class="col-4 div-margin">
+                        <div class="card opacicard text-center pb-0">
 
-<div class="container">
-    <h1>Bienvenido/a de nuevo {{username}}</h1> <br>
-    <div class="row">
+                            <picture class="pilotscard">
+                                <img src="{{photo}}" alt="imagen piloto">
+                            </picture> 
 
-        {{#each favpilot}}
-        <div class="col-4">
-            <h2>{{givenName}} {{familyName}}</h2>
-            <p>Pilot Number {{permanentNumber}}</p>
-            <img src="{{photo}}" alt="foto del piloto"> <br>
-            <a href="/profile/deletepilot/{{id}}">Eliminar de favoritos</a>
+                            <div class="card-body text-center pb-0">
+                                <h2 class="card-title"><strong>{{givenName}} {{familyName}}</strong></h2>
+                                <h5>Nacionalidad: {{nationality}}</h5>
+                                <h5>Fecha nacimiento: {{dateOfBirth}}</h5>
+                                <h5>Número: {{permanentNumber}}</h5>
+                                <div class="text-muted text-center mt-4">
+                                    <a href="/profile/deletepilot/{{id}}" class="button">Eliminar de favoritos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
         </div>
-        {{/each}}
-
-
     </div>
-</div>
+    <section>
+        <div class="container">
+            <div class="card opacicard text-center pb-0">
+                <h2 class="card-header text-center">Circuitos Favoritos de {{username}}</h2>
+                <div class="row">
+                    {{#each favcircuit}}
 
-<div class="container">
-    <div class="row">
-        {{#each favcircuit}}
+                    <div class="col-6 space">
 
-        <div class="col-6">
+                        <div class="card opacicard text-center pb-0">
 
-            <h2>{{circuitName}}</h2>
-            <img src="{{photo}}" alt=""> <br>
-            <a href="/profile/deletecircuit/{{id}}">Eliminar de favoritos</a>
+                            <h2 class="card-header">Circuito de {{circuitName}}</h2>
+
+                            <div class="card-body">
+
+                                <h4 class="card-text">País: {{country}}</h4>
+
+                                <picture class="circuitprof">
+                                    <img src="{{photo}}">
+                                </picture>
+
+                                <div class="text-muted text-center mt-4">
+                                    <a href="/profile/deletecircuit/{{id}}" class="button">Eliminar de favoritos</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {{/each}}
+
+                </div>
             </div>
+        </div>
+    </section>
 
+    <section>
+        <div class="container">
+            <div class="card opacicard text-center">
+                <h2 class="card-header">Escuderías Favoritas de {{username}}</h2> <br>
+                <div class="row">
+                    {{#each favconstructor}}
 
+                    <div class="col space">
+
+                        <div class="card opacicard text-center pb-0">
+
+                            <h2 class="card-header">Equipo {{name}}</h2>
+
+                            <div class="card-body">
+
+                                <h4 class="card-text">País: {{nationality}}</h4>
+
+                                <picture class="teamdetail">
+
+                                    <img src="{{photo}}" alt="foto del constructor">
+                                </picture>
+
+                                <div class="text-muted text-center mt-4">
+                                <a href="/profile/deleteconstructor/{{id}}" class="button">Eliminar de favoritos</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {{/each}}
+
+                </div>
+            </div>
         </div>
 
-        {{/each}}
-    </div>
+    </section>
 </div>
 
 
-<div class="container">
-    <div class="row">
-
-        {{#each favconstructor}}
-        <div class="col-6">
-            <h2>{{name}}</h2>
-            <img src="{{photo}}" alt="foto del piloto"> <br>
-            <a href="/profile/deleteconstructor/{{id}}">Eliminar de favoritos</a>
-        </div>
-        {{/each}}
-
-
-    </div>
 </div>

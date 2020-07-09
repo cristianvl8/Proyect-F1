@@ -2,10 +2,8 @@ const express = require("express")
 const router = express.Router()
 const passport = require("passport")
 const User = require("../models/user.model")
-const Pilot = require("../models/pilot.model")
-const {
-    findByIdAndDelete
-} = require("../models/user.model")
+const cloudUploader = require('../configs/cloudinary.config.js')
+
 
 
 
@@ -194,6 +192,35 @@ router.get('/deleteconstructor/:id', checkAuthenticated, (req, res) => {
 
 
 })
+
+
+// Profile Avatar 
+
+
+
+
+// router.get('/upload-cdn', (req, res, next) => res.render('profile/upload-form-cdn'))
+
+// router.post('/upload-cdn', cloudUploader.single('imageFile'), (req, res, next) => {
+
+//     console.log('Multer, en combinación con Cloudinary, crea este req.file:', req.file)
+
+//     User.create({
+//             name: req.body.imageName,
+//             path: req.file.url,
+//             originalName: req.file.originalname
+//         })
+//         .then(() => res.redirect('/gallery'))
+//         .catch(err => next(new Error(err)))
+// })
+
+
+
+
+
+
+
+
 
 
 module.exports = router

@@ -3,31 +3,25 @@
     <div class="container">
         <div class="row justify-content-around">
 
-
             {{#each allConstructors}}
 
             <div class="col-6 space">
 
-                <div class="card">
+                <div class="card opacicard text-center">
 
                     <h2 class="card-header">{{name}}</h2>
 
-
                     <!-- Card image -->
-                    <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="{{photo}}" alt="imagen del constructor">
-                        <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
+                    <div>
+                        <img src="{{photo}}" alt="imagen del constructor">
+
                     </div>
 
                     <!-- Card content -->
                     <div class="card-body">
 
-                        <h4 class="card-text">País: {{nationality}}</h4>
-
-                        <div class="card-footer text-muted text-center mt-4">
-                            <a href="/constructors/{{_id}}">More details</a>
+                        <div class="card-footer text-center">
+                            <a href="/constructors/{{_id}}" class="button">Más detalles</a>
                         </div>
                         
                     </div>
@@ -42,24 +36,3 @@
     </div>
 
 </div>
-
-{{!-- <div class="container">
-
-    <div class="row">
-
-
-
-        {{#each allConstructors}}
-
-        <div class="col-6 div-margin">
-
-            <h2>{{name}}</h2>
-            <img src="{{photo}}" alt="imagen del constructor">
-            <a href="/constructors/{{_id}}">Click here to see more details</a>
-
-        </div>
-        {{/each}}
-
-
-    </div>
-</div> --}}

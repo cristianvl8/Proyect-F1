@@ -7,24 +7,24 @@
 
             <div class="col-4 space">
 
-                <div class="card opacicard border-light">
+                <div class="card opacicard border-light text-center">
                     <h4 class="card-header">{{circuitName}}</h4>
 
 
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <img class="card-img-top" src="{{photo}}" alt="Card image cap">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
+
+                    <h4 class="card-title">Localización: {{locality}}</h4>
+                    <h4 class="card-title">País: {{country}}</h4>
+
                     </div>
 
 
 
-                    <h4 class="card-title">Localidad: {{locality}}</h4>
-                    <h4 class="card-title">País: {{country}}</h4>
+
 
                     <div class="card-footer text-muted text-center mt-4">
-                        <a href="/circuits/{{_id}}">More details</a>
+                        <a href="/circuits/{{_id}}" class="button">Más detalles</a>
                     </div>
 
                 </div>
@@ -37,10 +37,3 @@
  
     </div>
 </div>
-
-{{!-- 
-            <div class="col-6">
-                <h1>{{circuitName}}</h1> <br>
-                <img src="{{photo}}" alt="foto del circuito"> <br>
-                <a href="/circuits/{{_id}}">Click here to see more details</a>
-            </div> --}}

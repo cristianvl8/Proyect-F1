@@ -6,35 +6,28 @@
 
             <div class="card opacicardseason">
 
-                <h2 class="card-header">Race Schedule. Check the rounds and don't ever miss a race this season!</h2>
+                <h2 class="card-header">Calendario y Horario de carreras</h2>
 
                 <br>
 
-                {{!-- <h3>Check the rounds and don't ever miss a race this season!</h3> <br> --}}
 
 
                 <div class="card-body">
 
                     <form id="form-season">
-                        {{!-- <select>
-                        <option value="">current</option>
-                        <option value="">2019</option>
-                        <option value="">2018</option>
-                        <option value="">2017</option>
-                
-                     </select> --}}
-                        <label for="">Introduce a round</label>
+                        
+                        <label for="">Introduce el número de la carrera</label>
                         <input id="input-round" type="text">
-                        <button>Enviar</button>
+                        <button class="btn btn-light">Enviar</button>
 
                     </form> <br>
 
-                    <ul>
+                  
 
-                        <li id="result-season"></li> <br>
-                        <li id="result-date"></li>
+                        <h4 id="result-season"></h4> <br>
+                        <h4 id="result-date"></h4>
 
-                    </ul>
+                    
 
                 </div>
             </div>
@@ -49,43 +42,31 @@
 
             <div class="card opacicardseason">
 
-                <h2 class="card-header">Check the results of your favourite Pilot</h2>
+                <h2 class="card-header">Comprueba los resultados de tu piloto</h2>
 
                 <br>
 
                 <div class="card-body">
 
 
-                    <form id="form-pilot-results">
-                        <h3>Check the results of your favourite Pilot</h3>
-                        {{!-- <select>
-                            <option value="">current</option>
-                            <option value="">2019</option>
-                            <option value="">2018</option>
-                            <option value="">2017</option>
-                            
-                        </select> --}} <label for="">Introduce a round</label>
+                    <form  id="form-pilot-results">
+                      
+                        
+                        <label for="">Introduce el número de la carrera</label>
                         <input id="input-round-result" type="text">
 
-                        {{!-- <select>
-                            <option value="">hamilton</option>
-                            <option value="">alonso</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                        </select> --}}
-                        {{!-- <input id="input2" type="text">--}}
-
-                        <label for="">Introduce a pilot</label>
+                    
+                        <label for="">Introduce un piloto</label>
                         <input id="input-pilot" type="text">
 
-                        <button>Enviar</button>
+                        <button class="btn btn-light">Enviar</button>
                     </form>
 
                     <ul>
 
-                        <li id="result-pilot"></li> <br>
-                        <li id="result-laps"></li> <br>
-                        <li id="result-speed"></li>
+                        <h4 id="result-pilot"></h4> <br>
+                        <h4 id="result-laps"></h4> <br>
+                        <h4 id="result-speed"></h4>
 
                     </ul>
                 </div>

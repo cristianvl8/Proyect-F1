@@ -1,26 +1,27 @@
-<div class="circuits spacediv">
-
+<div class="circuitsdetails spacediv">
 
     <div class="container">
-        <div class="row">
-            <div class="card">
+        <div class="row  ">
+            <div class="card opacicard">
 
-                <h2 class="card-header">{{circuitName}}</h2>
+                <h2 class="card-header cardhedpad">{{circuitName}}</h2>
 
-                <div class="card-body">
+                <div class="card-body text-center">
 
-
-                    <h4>Locality: {{locality}}</h4>
-                    <h4>Country: {{country}}</h4>
-                    <h4>Location: {{lat}} , {{long}}</h4>
-                    <h4 href="{{url}}">Check more info here:</h4> <br>
-                    <h4 href="/profile/favcircuit/{{id}}">Add circuit to favorites</h4>
+                    <h4>Localización: {{locality}}</h4>
+                    <h4>País: {{country}}</h4>
+                    <h4>Coordenadas: {{lat}} , {{long}}</h4>
+                   
+            
+                    <figure class="imgfav">
+                        <a href="/profile/favcircuit/{{id}}"><img class="imgfav"src="/images/heartfav.png"></a>
+                    </figure>
 
                 </div>
-                <div class="col imgcard">
+                <picture class="teamdetail">
                     <img src="{{photo}}" alt="foto del circuito">
 
-                </div>
+                </picture>
 
 
             </div>
@@ -29,17 +30,3 @@
     </div>
 
 </div>
-
-
-{{!-- <div class="col justify-content-center text-center align">
-                <h2>{{circuitName}}</h2>
-                <p>Locality: {{locality}}</p>
-                <p>Country: {{country}}</p>
-                <p>Location: {{lat}} , {{long}}</p>
-                <a href="{{url}}">Check more info here:</a> <br>
-                <a href="/profile/favcircuit/{{id}}">Add circuit to favorites</a>
-
-            </div>
-            <div class="col">
-                <img src="{{photo}}" alt="foto del circuito">
-            </div> --}}
