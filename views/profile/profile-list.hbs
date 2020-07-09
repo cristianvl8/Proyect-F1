@@ -24,12 +24,7 @@
                                 </div>
                             </div>
                         </div>
-                        {{!-- <div class="col-4">
-                            <h2>{{givenName}} {{familyName}}</h2>
-                            <p>Pilot Number {{permanentNumber}}</p>
-                            <img src="{{photo}}" alt="foto del piloto"> <br>
-                            <a href="/profile/deletepilot/{{id}}">Eliminar de favoritos</a>
-                            </div> --}}
+
                     </div>
                     {{/each}}
                 </div>
@@ -87,7 +82,7 @@
 
                             <div class="card-body">
 
-                                <h4 class="card-text">País: {{nationality}}</h4>
+                                <h4 class="card-text">Nacionalidad: {{nationality}}</h4>
 
                                 <picture class="teamdetail">
 
@@ -95,7 +90,7 @@
                                 </picture>
 
                                 <div class="card-footer text-muted text-center mt-4">
-                                <a href="/profile/deleteconstructor/{{id}}">Eliminar de favoritos</a>
+                                    <a href="/profile/deleteconstructor/{{id}}">Eliminar de favoritos</a>
                                 </div>
 
                             </div>
@@ -108,16 +103,6 @@
                 </div>
             </div>
         </div>
-
-        {{!-- 
-        {{#each favconstructor}}
-        <div class="col-6">
-            <h2>Equipo {{name}}</h2>
-            <img src="{{photo}}"> <br>
-            <a href="/profile/deleteconstructor/{{id}}">Eliminar de favoritos</a>
-        </div>
-        {{/each}} --}}
-
 
 
 
