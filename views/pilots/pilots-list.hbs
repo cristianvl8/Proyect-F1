@@ -3,7 +3,6 @@
     <div class="container">
         <div class="row justify-content-between">
 
-
             {{#each allPilots}}
 
             <div class="col-4 div-margin">
@@ -28,7 +27,11 @@
 
                         <!-- Card footer -->
                         <div class="card-footer text-muted text-center mt-4">
-                            <a href="/pilots/{{_id}}" class="button">Más detalles</a>
+                            <a href="/pilots/{{_id}}" class="button">Más detalles</a> <br>
+                            <a href="/pilots/new">Crear piloto</a> <br>
+                            <a href="/pilots/delete/{{id}}">Eliminar piloto</a> <br>
+                            <a href="/pilots/edit/{{id}}">Editar piloto</a>
+
                         </div>
 
                     </div>
