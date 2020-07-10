@@ -3,7 +3,8 @@ const Schema = mongoose.Schema
 
 const pilotSchema = new Schema({
     photo: {
-        type: String
+        type: String,
+        default: "https://germanalvarez.net/img/german-alvarez-sc.jpg"
     },
     permanentNumber: {
         type: String
@@ -17,18 +18,25 @@ const pilotSchema = new Schema({
         type: String
     },
     givenName: {
-        type: String 
+        type: String
     },
     familyName: {
         type: String
     },
     dateOfBirth: {
-        type: String 
+        type: String,
+        default: "1993-12-14"
     },
     nationality: {
         type: String
-    }
-}, {
+    },
+    custom: {
+        type: Boolean,
+        default: true
+    },
+    
+    ownerId: { type: Schema.Types.ObjectId },
+},{
     timestamps: true
 })
 

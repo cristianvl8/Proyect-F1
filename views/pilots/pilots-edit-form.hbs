@@ -1,0 +1,47 @@
+<div class="container spacediv">
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <h1 style="font-weight: 100">Editar piloto</h1>
+        </div>
+
+        <div class="col-md-6">
+
+            <form action="/pilots/edit/{{id}}" method="post">
+                <div class="form-group">
+                    <label for="givenName">Nombre</label>
+                    <input name="givenName" type="text" class="form-control" id="givenName" value="{{givenName}}">
+                </div>
+                <div class="form-group">
+                    <label for="familyName">Apellido</label>
+                    <input name="familyName" type="text" class="form-control" id="familyName" value="{{familyName}}">
+                </div>
+                <div class="form-group">
+                    <label for="code">Código del Piloto</label>
+                    <input name="code" type="text" class="form-control" id="code" placeholder="ALO" value="{{code}}">
+                </div>
+                <div class="form-group">
+                    <label for="length-input">Nacionalidad</label>
+                    <input name="nationality" type="text" class="form-control" id="nationality" value="{{nationality}}">
+                </div>
+                <div class="form-group">
+                    <label for="dateOfBirth">Fecha de nacimiento</label>
+                    <input name="dateOfBirth" type="text" class="form-control" id="dateOfBirth" placeholder="1995-12-14"
+                        value="{{dateOfBirth}}">
+                </div>
+                <div class="form-group">
+                    <label for="permanentNumber">Número del piloto</label>
+                    <input name="permanentNumber" type="text" class="form-control" id="permanentNumber"
+                        value="{{permanentNumber}}">
+                </div>
+
+
+                <button type="submit" class="btn btn-dark">Editar piloto</button>
+                <a href="/pilots" class="btn btn-dark">Volver</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
